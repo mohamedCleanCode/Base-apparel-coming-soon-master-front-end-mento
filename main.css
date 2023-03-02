@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column-reverse;
+    min-height: 100vh;
+  }
+}
+.info {
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 50px;
+}
+@media (max-width: 767px) {
+  .info {
+    width: 100%;
+    height: 50%;
+    padding: 0 30px;
+    justify-content: stretch;
+  }
+}
+@media (max-width: 767px) {
+  .info-logo {
+    position: relative;
+    top: -130%;
+  }
+}
+.info-title {
+  width: 50%;
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 10px;
+  color: hsl(0, 6%, 24%);
+}
+@media (max-width: 767px) {
+  .info-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+.info-title p {
+  color: hsl(0, 36%, 70%);
+  text-transform: uppercase;
+}
+.info-text {
+  line-height: 1.6;
+  width: 90%;
+  color: hsl(0, 36%, 70%);
+}
+@media (max-width: 767px) {
+  .info-text {
+    width: 100%;
+    text-align: center;
+  }
+}
+.info-input {
+  width: 100%;
+  position: relative;
+}
+.info-input input {
+  width: 80%;
+  padding: 20px;
+  border-radius: 35px;
+  font-size: 17px;
+  border: 1px solid #eee;
+  transition: 0.5s;
+}
+.info-input input.active {
+  border: 1px solid hsl(0, 93%, 68%);
+}
+@media (max-width: 767px) {
+  .info-input input {
+    width: 90%;
+  }
+}
+.info-input input:focus {
+  outline: none;
+}
+.info-input button {
+  padding: 18px 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 35px;
+  color: white;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  font-size: 22px;
+  position: absolute;
+  top: 0;
+  right: 60px;
+  transition: 0.5s;
+}
+@media (max-width: 767px) {
+  .info-input button {
+    right: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .info-input button {
+    right: 100px;
+  }
+}
+.info-input button:hover,
+.info-input button.active {
+  opacity: 0.9;
+}
+.info-input-error-icon {
+  position: absolute;
+  top: 30%;
+  right: 35%;
+  display: none;
+}
+.info-input-error-icon.active {
+  display: block;
+}
+.info-input-error-message {
+  position: absolute;
+  left: 20px;
+  bottom: -24px;
+  font-size: 12px;
+  text-transform: lowercase;
+  color: hsl(0, 93%, 68%);
+  display: none;
+}
+.info-input-error-message.active {
+  display: block;
+}
+.image {
+  width: 50%;
+  background-image: url(./images/hero-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .image {
+    width: 100%;
+    background-image: url(./images/hero-mobile.jpg);
+    height: 50%;
+  }
+}
